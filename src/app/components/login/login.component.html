@@ -1,0 +1,19 @@
+<h2 class="mb-5">Autorización requerida</h2>
+<div>
+  <form #f="ngForm" novalidate>
+      <div class="mb-3">
+        <label for="userName" class="form-label">Usuario</label>
+        <input class="form-control" type="text" id="userName" name="userName" [(ngModel)]="userName" required
+          placeholder="Ingrese su usuario *" title="Ingrese su usuario">
+      </div>
+      <div class="mb-5">
+        <label for="password" class="form-label">Password</label>
+        <input class="form-control" type="password" name="password" id="password" [(ngModel)]="password" required
+          placeholder="Ingrese su contraseña *" title="Ingrese su contraseña">
+      </div>
+    <div mat-dialog-actions class="d-flex justify-content-between">
+      <button type="button" class=" btn btn-outline-dark" mat-button mat-dialog-close>Cerrar</button>
+      <button type="button"(click)="onLogin()" class="btn btn-outline-dark" type="submit" value="LOGIN">Login</button>
+    </div>
+  </form>
+

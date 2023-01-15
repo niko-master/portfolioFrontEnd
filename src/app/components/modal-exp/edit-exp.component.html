@@ -1,0 +1,17 @@
+<h2 class=" mb-5">Actualizar experiencia Laboral</h2>
+<form #formAdd="ngForm" novalidate>
+  <div class="mb-3">
+    <label for="tipoEmpleo" class="form-label">Tipo de empleo</label>
+    <input type="text" class="form-control" id="tipoEmpleo" name="tipoEmpleo" ngModel="{{expLaboral?.tipoEmpleo}}"
+      required placeholder="Tipo de empleo">
+  </div>
+  <div class="mb-3">
+    <label for="descripcion" class="form-label">Experiencia</label>
+    <textarea class="form-control" id="descripcion" name="descripcion" rows="3" ngModel="{{expLaboral?.descripcion}}"
+      required></textarea>
+  </div>
+  <div mat-dialog-actions class="d-flex justify-content-between">
+    <button type="button" (click)="closeDialog()" class=" btn btn-outline-dark" mat-dialog-close>Cerrar</button>
+    <button type="button" (click)="saveExpLaboral(formAdd)" class="btn btn-outline-dark">Guardar cambios</button>
+  </div>
+</form>

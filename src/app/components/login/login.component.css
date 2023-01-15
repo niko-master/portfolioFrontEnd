@@ -1,0 +1,21 @@
+i {
+    font-weight: bold;
+    font-style: normal;
+ }
+
+h2{
+    color: white;
+}
+.form-label {
+    color: white !important;
+}
+button{
+    border-radius: 80px;
+    background-color: linear-gradient(90.18deg, #1d1d1ddc 31.74%, #1d1d1ddc 90.49%, #1d1d1ddc 90.49%);
+    color: white;
+    font-weight: bold;
+  } 
+  button:hover{
+    color: black;
+    background-color: white;
+  }

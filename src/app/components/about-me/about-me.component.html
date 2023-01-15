@@ -1,0 +1,120 @@
+<!------------ABOUT-ME---------->
+<section class="about-me" id="about-me">
+  <article class="container-1 section full-lg-screen">
+    <div class="divider">
+      <h2 class="section-title">QUIEN SOY</h2>
+    </div>
+       <article class="about-description">
+      <article>
+        <p> {{persona.sobremi}}
+        </p>
+      </article>
+      <article>
+        <div class="about_img">
+          <img src="assets/yoPortfolio.png">
+        </div>
+      </article>
+      <article class="info">
+        <div>
+          <h3>Información</h3>
+        </div>
+        <div><i class='bx bx-user'></i>{{persona.nombre}} {{persona.apellido}}</div>
+        <div><i class='bx bx-phone'></i>{{persona.telefono}}</div>
+        <div> <i class='bx bx-envelope'></i>{{persona.email}}</div>
+        <div class="mt-3"><h3>Experiencia</h3>
+          <span *ngIf="isLogged">Agregar<a class='bx bx-plus-medical mx-auto float-end alinks' (click)="openModal()"*ngIf="isLogged"></a></span> 
+        </div>
+        <div class="table-group-divider">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Trabajo</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr *ngFor="let explab of expLaboral">
+                <td>{{explab.tipoEmpleo}}</td>
+                <td>{{explab.descripcion}}</td>
+                <td><a *ngIf="isLogged" class="bx bx-edit-alt alinks" (click)="openEditModal(explab)"></a></td>
+                <td><a><i *ngIf="isLogged"class='bx bx-trash' (click)="delete(explab.explaboral_id)"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </article>
+    <h2>HABILIDADES</h2>
+    <article class="about-me-skills">
+      <h3 class="it">IT</h3>
+      <div class="about-me-msft progress">
+        <img src="assets/microsoft.png" alt="microsoft">
+        <p>
+          <b>Microsoft Windows</b>
+          <b>90%</b>
+        </p>
+        <progress value="90" min="0" max="100"></progress>
+      </div>
+      <div class="about-me-msftsvr progress">
+        <img src="assets/winserver2.png" alt="winserver">
+        <p>
+          <b>Microsoft Server</b>
+          <b>80%</b>
+        </p>
+        <progress value="80" min="0" max="100"></progress>
+      </div>
+      <div class="about-me-csco progress">
+        <img src="assets/cisco.png" alt="cisco systems">
+        <p>
+          <b>Cisco Systems</b>
+          <b>75%</b>
+        </p>
+        <progress value="75" min="0" max="100"></progress>
+      </div>
+      <div class="about-me-wifi progress">
+        <img src="assets/wifi.png" alt="zonas wifi">
+        <p>
+          <b>Wifi Zone</b>
+          <b>90%</b>
+        </p>
+        <progress value="90" min="0" max="100"></progress>
+      </div>
+      <h3 class="web">WEB</h3>
+      <div class="about-me-html progress">
+        <img src="assets/html5.png" alt="winserver">
+        <p>
+          <b>HTML5</b>
+          <b>70%</b>
+        </p>
+        <progress value="60" min="0" max="100"></progress>
+      </div>
+      <div class="about-me-css progress">
+        <img src="assets/css3.png" alt="ccs3">
+        <p>
+          <b>CSS3</b>
+          <b>70%</b>
+        </p>
+        <progress value="70" min="0" max="100"></progress>
+      </div>
+      <div class="about-me-ts progress">
+        <img src="assets/ts2.png" alt="Typescript">
+        <p>
+          <b>Typescript</b>
+          <b>30%</b>
+        </p>
+        <progress value="30" min="0" max="100"></progress>
+      </div>
+      <div class="about-me-figma progress">
+        <img src="assets/figma.png" alt="Figma">
+        <p>
+          <b>Figma</b>
+          <b>60%</b>
+        </p>
+        <progress value="60" min="0" max="100"></progress>
+      </div>
+    </article>
+    <div class="divider">
+      <h2 class="download">DESCARGA MI CV</h2>
+    </div>
+  </article>
+</section>

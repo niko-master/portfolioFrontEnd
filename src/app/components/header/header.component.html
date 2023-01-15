@@ -1,0 +1,32 @@
+  <!------------HEADER------------>
+  <header class="header">
+    <section class="container-1">
+      <div class="logo">
+        <a href="index.html" class="alinks">Nicolás Francés</a>
+      </div>
+      <button class="menu-btn">
+        <svg 
+        (click)="clickEvent()" [ngClass]="toggle ? 'none' : 'ok'"
+        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
+        </svg>
+        <svg  (click)="clickEvent()" [ngClass]="toggle ? 'ok' : 'none'"
+        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z" />
+        </svg>
+      </button>
+      <nav 
+       (click)="clickEvent()"
+        [ngClass]="{'is-active' : toggle}"
+      class="menu none-full-lg-screen"  id="navbar">
+        <a href="#" class="alinks">Inicio</a>
+        <a href="#about-me" class="alinks">Acerca</a>
+        <a href="#services" class="alinks">Servicios</a>
+        <a href="#portfolio" class="alinks">Portfolio</a>
+        <a href="#contact" class="alinks">Contacto</a>
+        <a class="alinks"  (click)="openModal()" *ngIf="!isLogged">Acceso</a>
+        <a  class="alinks" id ="tothetop" (click)="logOut()" *ngIf="isLogged">Cerrar sesión</a>
+      </nav>
+    </section>
+  </header>
