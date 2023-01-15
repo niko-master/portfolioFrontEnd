@@ -9,8 +9,8 @@ import { JwtDto } from '../model/jwt-dto';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
-  // authURL = 'https://shrouded-atoll-65510.herokuapp.com/auth/';
+  // authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://portfoliobackend-gfx0.onrender.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
